@@ -4,6 +4,16 @@
   The "libary" begins here!  
   Its just a bunch of simple functions for showing the test environment not any thing 'real'
 */
+MyMath::MyMath()
+{
+
+}
+
+MyMath::~MyMath()
+{
+
+}
+
 
 /* integer add 			 */
 int MyMath::Operator_ADD(int in1, int in2)
