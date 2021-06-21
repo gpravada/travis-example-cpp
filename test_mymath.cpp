@@ -20,8 +20,8 @@ int test_and() {
 	if ( iVal1 != iVal2)
 		return TEST_FAIL;
 
-	int iVal1 = clMyMath.Operator_AND(2,7);
-	int iVal2 = (2&7);
+	iVal1 = clMyMath.Operator_AND(2,7);
+	iVal2 = (2&7);
 	printf("iVal1(%d), iVal2(%d)\n", iVal1, iVal2);
 	if (iVal1 != iVal2)
 		return TEST_FAIL;
