@@ -14,10 +14,16 @@
 /*   test cases for AND function  */
 int test_and() {
 	MyMath clMyMath;
-	if (clMyMath.Operator_AND(3,4) != (3&4))
+	int iVal1 = clMyMath.Operator_AND(3,4);
+	int iVal2 = (3&4);
+	printf("iVal1(%d), iVal2(%d)\n", iVal1, iVal2);
+	if ( iVal1 != iVal2)
 		return TEST_FAIL;
 
-	if (clMyMath.Operator_ADD(2,7) != (2&7))
+	int iVal1 = clMyMath.Operator_AND(2,7);
+	int iVal2 = (2&7);
+	printf("iVal1(%d), iVal2(%d)\n", iVal1, iVal2);
+	if (iVal1 != iVal2)
 		return TEST_FAIL;
 
 	// un comment me to make this fail!
