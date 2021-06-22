@@ -14,10 +14,16 @@
 /*   test cases for AND function  */
 int test_and() {
 	MyMath clMyMath;
-	if (clMyMath.Operator_AND(3,4) != (3&4))
+	int iVal1 = clMyMath.Operator_AND(3,4);
+	int iVal2 = (3&4);
+	printf("iVal1(%d), iVal2(%d)\n", iVal1, iVal2);
+	if ( iVal1 != iVal2)
 		return TEST_FAIL;
 
-	if (clMyMath.Operator_ADD(2,7) != (2&7))
+	iVal1 = clMyMath.Operator_AND(2,7);
+	iVal2 = (2&7);
+	printf("iVal1(%d), iVal2(%d)\n", iVal1, iVal2);
+	if (iVal1 != iVal2)
 		return TEST_FAIL;
 
 	// un comment me to make this fail!
@@ -85,41 +91,54 @@ int test_mul() {
 	more general purpose test framework.
 */
 int run_tests() {
+	printf("Running AND test...");
 	if (TEST_FAIL == test_and()) {
 		printf("failed test_and()\n");
 		return TEST_FAIL;
 	}
+	printf("PASS\n");
 
+	printf("Running OR test...");
 	if (TEST_FAIL == test_or()) {
 		printf("failed test_or()\n");
 		return TEST_FAIL;
 	}
+	printf("PASS\n");
 	
+	printf("Running XOR test...");
 	if (TEST_FAIL == test_xor()){
 		printf("failed test_xor()\n");
 		return TEST_FAIL;
 	}
+	printf("PASS\n");
 
+	printf("Running XNOR test...");
 	if (TEST_FAIL == test_xnor()){
 			printf("failed test_xnor()\n");
 			return TEST_FAIL;
 		}
+	printf("PASS\n");
 
+	printf("Running ADD test...");
 	if (TEST_FAIL == test_add()){
 			printf("failed test_add()\n");
 			return TEST_FAIL;
 		}
+	printf("PASS\n");
 
+	printf("Running SUB test...");
 	if (TEST_FAIL == test_sub()){
 			printf("failed test_sub()\n");
 			return TEST_FAIL;
 		}
+	printf("PASS\n");
 
-
+	printf("Running MUL test...");
 	if (TEST_FAIL == test_mul()){
 			printf("failed test_mul()\n");
 			return TEST_FAIL;
 		}
+	printf("PASS\n");
 
 	return TEST_OK;
 }
@@ -139,10 +158,10 @@ int main()
 	result = run_tests();
 
 	if (result == TEST_OK) 
-		printf ("tests passed.\n");
+		printf ("tests PASS\ned.\n");
 	else
 		printf ("tests failed.\n");
 
-    return result;  /* remember the value 0 is considered passing in a travis-ci sense */
+    return result;  /* remember the value 0 is considered PASS\ning in a travis-ci sense */
 
 }
