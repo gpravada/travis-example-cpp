@@ -96,49 +96,49 @@ int run_tests() {
 		printf("failed test_and()\n");
 		return TEST_FAIL;
 	}
-	printf("PASS");
+	printf("PASS\n");
 
 	printf("Running OR test...");
 	if (TEST_FAIL == test_or()) {
 		printf("failed test_or()\n");
 		return TEST_FAIL;
 	}
-	printf("PASS");
+	printf("PASS\n");
 	
 	printf("Running XOR test...");
 	if (TEST_FAIL == test_xor()){
 		printf("failed test_xor()\n");
 		return TEST_FAIL;
 	}
-	printf("PASS");
+	printf("PASS\n");
 
 	printf("Running XNOR test...");
 	if (TEST_FAIL == test_xnor()){
 			printf("failed test_xnor()\n");
 			return TEST_FAIL;
 		}
-	printf("PASS");
+	printf("PASS\n");
 
 	printf("Running ADD test...");
 	if (TEST_FAIL == test_add()){
 			printf("failed test_add()\n");
 			return TEST_FAIL;
 		}
-	printf("PASS");
+	printf("PASS\n");
 
 	printf("Running SUB test...");
 	if (TEST_FAIL == test_sub()){
 			printf("failed test_sub()\n");
 			return TEST_FAIL;
 		}
-	printf("PASS");
+	printf("PASS\n");
 
 	printf("Running MUL test...");
 	if (TEST_FAIL == test_mul()){
 			printf("failed test_mul()\n");
 			return TEST_FAIL;
 		}
-	printf("PASS");
+	printf("PASS\n");
 
 	return TEST_OK;
 }
@@ -158,10 +158,10 @@ int main()
 	result = run_tests();
 
 	if (result == TEST_OK) 
-		printf ("tests passed.\n");
+		printf ("tests PASS\ned.\n");
 	else
 		printf ("tests failed.\n");
 
-    return result;  /* remember the value 0 is considered passing in a travis-ci sense */
+    return result;  /* remember the value 0 is considered PASS\ning in a travis-ci sense */
 
 }
